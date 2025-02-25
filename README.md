@@ -35,7 +35,7 @@ köp, där varje använd poäng omvandlas till 1 kr.
 
 ## Requirements:
 
--   Ruby version
+-   **Ruby version:** 3.4.1
 
 -   System dependencies
 
@@ -45,7 +45,8 @@ köp, där varje använd poäng omvandlas till 1 kr.
 
 -   Database initialization
 
--   How to run the test suite
+-   **How to run the test suite:**
+    Run `rails test`
 
 -   Services (job queues, cache servers, search engines, etc.)
 
@@ -60,8 +61,10 @@ köp, där varje använd poäng omvandlas till 1 kr.
 -   [x] Skapa en databas
 -   [x] Skapa en klass för filmer
 -   [x] Skapa routes för filmer
--   [ ] Skapa en klass för kategorier
--   [ ] Skapa routes för kategorier
+-   [x] Skapa en klass för kategorier
+-   [x] Skapa routes för kategorier
+-   [ ] Skapa en klass för kampanjer
+-   [ ] Skapa routes för kampanjer
 -   [ ] Skapa en klass för kunder
 -   [ ] Skapa routes för kunder
 -   [ ] Skapa en klass för kundvagn
