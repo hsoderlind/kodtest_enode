@@ -56,10 +56,10 @@ köp, där varje använd poäng omvandlas till 1 kr.
 ## Todo
 
 -   [x] Skapa en README.md
--   [ ] Skapa ett repository på GitHub
+-   [x] Skapa ett repository på GitHub
 -   [x] Skapa en databas
--   [ ] Skapa en klass för filmer
--   [ ] Skapa routes för filmer
+-   [x] Skapa en klass för filmer
+-   [x] Skapa routes för filmer
 -   [ ] Skapa en klass för kategorier
 -   [ ] Skapa routes för kategorier
 -   [ ] Skapa en klass för kunder
