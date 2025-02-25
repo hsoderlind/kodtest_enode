@@ -1,0 +1,7 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+rh:
+  name: Robin Hood
+  description: "Robin Hood is a legendary outlaw who steals from the rich and gives to the poor."
+  price: 100
+  stock: 100
