@@ -76,8 +76,8 @@ köp, där varje använd poäng omvandlas till 1 kr.
 -   [x] Skapa routes för kategorier
 -   [x] Skapa en resurs för kampanjer
 -   [x] Skapa routes för kampanjer
--   [ ] Skapa en resurs för kunder
--   [ ] Skapa routes för kunder
+-   [x] Skapa en resurs för kunder
+-   [x] Skapa routes för kunder
 -   [ ] Skapa en resurs för kundvagn
 -   [ ] Skapa routes för kundvagn
 -   [ ] Skapa en resurs för försäljningar
