@@ -37,13 +37,18 @@ köp, där varje använd poäng omvandlas till 1 kr.
 
 -   **Ruby version:** 3.4.1
 
--   System dependencies
+-   **Rails version:** 8.0.1
+
+-   **System dependencies** ruby and rubyy on rails
 
 -   Configuration
 
 -   Database creation
+-   -   Run `rails db:create`
 
 -   Database initialization
+-   -   Run `rails db:migrate`
+-   -   Run `rails db:seed`
 
 -   **How to run the test suite:**
     Run `rails test`
@@ -51,6 +56,12 @@ köp, där varje använd poäng omvandlas till 1 kr.
 -   Services (job queues, cache servers, search engines, etc.)
 
 -   Deployment instructions
+-   -   Clone this repo: `git clone https://github.com/hsoderlind/kodtest_enode`
+-   -   Run `bundle install`
+-   -   Run `rails db:create`
+-   -   Run `rails db:migrate`
+-   -   Run `rails db:seed`
+-   -   Rub `rails server`
 
 -   ...
 
@@ -59,19 +70,19 @@ köp, där varje använd poäng omvandlas till 1 kr.
 -   [x] Skapa en README.md
 -   [x] Skapa ett repository på GitHub
 -   [x] Skapa en databas
--   [x] Skapa en klass för filmer
+-   [x] Skapa en resurs för filmer
 -   [x] Skapa routes för filmer
--   [x] Skapa en klass för kategorier
+-   [x] Skapa en resurs för kategorier
 -   [x] Skapa routes för kategorier
--   [ ] Skapa en klass för kampanjer
+-   [ ] Skapa en resurs för kampanjer
 -   [ ] Skapa routes för kampanjer
--   [ ] Skapa en klass för kunder
+-   [ ] Skapa en resurs för kunder
 -   [ ] Skapa routes för kunder
--   [ ] Skapa en klass för kundvagn
+-   [ ] Skapa en resurs för kundvagn
 -   [ ] Skapa routes för kundvagn
--   [ ] Skapa en klass för försäljningar
+-   [ ] Skapa en resurs för försäljningar
 -   [ ] Skapa routes för försäljningar
--   [ ] Skapa en klass för fakturor
+-   [ ] Skapa en resurs för fakturor
 -   [ ] Skapa routes för fakturor
--   [ ] Skapa en klass för poäng
+-   [ ] Skapa en resurs för poäng
 -   [ ] Skapa routes för poäng
