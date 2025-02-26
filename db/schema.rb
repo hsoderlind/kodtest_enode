@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_02_25_160456) do
+ActiveRecord::Schema[8.0].define(version: 2025_02_25_165103) do
+  create_table "campaigns", force: :cascade do |t|
+    t.string "name"
+    t.integer "points"
+    t.integer "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_campaigns_on_category_id"
+  end
+
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
