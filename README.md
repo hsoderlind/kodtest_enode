@@ -50,8 +50,9 @@ köp, där varje använd poäng omvandlas till 1 kr.
 -   -   Run `rails db:migrate`
 -   -   Run `rails db:seed`
 
--   **How to run the test suite:**
-    Run `rails test`
+-   **How to run the test suite:**\
+    Run `rails test`\
+    **Postman:** There is a collection of Postman requests that can be used to test request to some of the API endpoints. You'll find the collection in Enode_kodtest.postman_collection.json\
 
 -   Services (job queues, cache servers, search engines, etc.)
 
@@ -88,4 +89,11 @@ köp, där varje använd poäng omvandlas till 1 kr.
 -   [x] Skapa routes för försäljningar
 -   [x] Skapa en resurs för fakturor
 -   [x] Skapa routes för fakturor
--   [ ] Clean up
+-   [x] Clean up
+
+## Reflektioner
+
+Första gången med Ruby och Ruby on Rails. Måste medge att Rby är ett intressant språk. Det skiljer sig mycket från de andra programmeringsspråk jag har erfarenhet av. Det är lätt att komma igång och sparar tid att utveckla i.\
+Jag har erfarenhet av att jobba i Laravel (PHP-ramverk) och Ruby on rails och Laravel påminner mycket om varandra så jag kände igen mig många gånger i begreppen och logiken.
+Det finns säkert mängder med förbättringar man kan göra i min kodbas både vad det gäller placering av logik och säkerhet.
+Jag tycker jag har fått en god förståelse för hur man använder Ruby on rails och det är en bra grund att utveckla vidare på.
