@@ -2,14 +2,14 @@
 
 one:
   cart: one
-  product: one
+  product: rh
   quantity: 1
   price: 9.99
   total: 9.99
 
 two:
   cart: two
-  product: two
+  product: rh
   quantity: 1
   price: 9.99
   total: 9.99
