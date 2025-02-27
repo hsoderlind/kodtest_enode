@@ -13,6 +13,10 @@ class GuestCustomer
     []
   end
 
+  def id
+    @id
+  end
+
   def get_cart
     Cart.find_or_create_by(guest_id: @id.to_s)
   end

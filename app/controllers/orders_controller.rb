@@ -21,7 +21,11 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new(order_params)
 
-    if params[:use_points] == true && order_params[:subtotal] > 150
+    if params[:as_guest]
+      @order.guest_id = @current_customer.id
+    end
+
+    if @current_customer.registered? && params[:use_points] == true && order_params[:subtotal] > 150
       subtotal = order_params[:subtotal]
       discount = 0
       points = Customer.find(order_params[:customer_id]).points.all
