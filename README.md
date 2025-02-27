@@ -86,6 +86,6 @@ köp, där varje använd poäng omvandlas till 1 kr.
 -   [x] Skapa routes för poäng
 -   [x] Skapa en resurs för försäljningar
 -   [x] Skapa routes för försäljningar
--   [ ] Skapa en resurs för fakturor
--   [ ] Skapa routes för fakturor
+-   [x] Skapa en resurs för fakturor
+-   [x] Skapa routes för fakturor
 -   [ ] Clean up

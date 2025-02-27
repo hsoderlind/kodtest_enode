@@ -1,10 +1,10 @@
 class OrdersController < ApplicationController
-  before_action :set_order, only: %i[ show edit update destroy ]
+  before_action :set_order, only: %i[ show edit update destroy invoice ]
 
   #  GET /orders or /orders.json
   def index
     @orders = Order.includes(:order_items).all
-    render json: @orders
+    render json: @orders, include: :order_items
   end
 
   #  GET /orders/1 or /orders/1.json
@@ -19,10 +19,25 @@ class OrdersController < ApplicationController
 
   # POST /orders or /orders.json
   def create
-    @order = Order.new(order_params)
+    @order = Order.create(
+      customer_id: order_params[:customer_id],
+      subtotal: order_params[:subtotal],
+      total: order_params[:total],
+      discount: order_params[:discount]
+    )
 
     if params[:as_guest]
       @order.guest_id = @current_customer.id
+    end
+
+    Rails.logger.debug "Params: #{params[:order][:items]}"
+    params[:order][:items].each do |item|
+      @order.order_items.create(
+        product_id: item[:product_id],
+        quantity: item[:quantity],
+        price: item[:price],
+        total: item[:total]
+      )
     end
 
     if @current_customer.registered? && params[:use_points] == true && order_params[:subtotal] > 150
@@ -80,12 +95,18 @@ class OrdersController < ApplicationController
     render json: { message: "Order deleted successfully" }
   end
 
+  # POST /orders/1/invoice or /orders/1/invoice.json
+  def invoice
+    invoice = @order.generate_invoice
+    render json: invoice, include: [ :customer, :invoice_items ]
+  end
+
   private
     def set_order
       @order = Order.includes(:order_items).find(params[:id])
     end
 
     def order_params
-      params.expect(order: [ :customer_id, :subtotal, :total ])
+      params.expect(order: [ :customer_id, :subtotal, :total, items: [ :product_id, :quantity, :price, :total ] ])
     end
 end
