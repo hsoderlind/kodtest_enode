@@ -1,6 +1,7 @@
 class Customer < ApplicationRecord
   has_one :cart
   has_many :points
+  has_many :orders
   has_secure_password
   validates :password, presence: true
   validates :name, presence: true

@@ -47,6 +47,6 @@ class CategoriesController < ApplicationController
     end
 
     def category_params
-      params.expect(product: [ :name ])
+      params.expect(category: [ :name ])
     end
 end
