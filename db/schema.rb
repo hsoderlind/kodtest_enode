@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_02_27_093900) do
+ActiveRecord::Schema[8.0].define(version: 2025_02_27_141845) do
   create_table "campaigns", force: :cascade do |t|
     t.string "name"
     t.integer "points"
@@ -55,6 +55,17 @@ ActiveRecord::Schema[8.0].define(version: 2025_02_27_093900) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "points", force: :cascade do |t|
+    t.integer "customer_id", null: false
+    t.integer "order_id"
+    t.integer "allocated_points"
+    t.integer "used_points"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["customer_id"], name: "index_points_on_customer_id"
+    t.index ["order_id"], name: "index_points_on_order_id"
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -69,5 +80,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_02_27_093900) do
   add_foreign_key "cart_items", "carts"
   add_foreign_key "cart_items", "products"
   add_foreign_key "carts", "customers"
+  add_foreign_key "points", "customers"
+  add_foreign_key "points", "orders"
   add_foreign_key "products", "categories"
 end

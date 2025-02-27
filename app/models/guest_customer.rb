@@ -9,6 +9,10 @@ class GuestCustomer
     false
   end
 
+  def points
+    []
+  end
+
   def get_cart
     Cart.find_or_create_by(guest_id: @id.to_s)
   end

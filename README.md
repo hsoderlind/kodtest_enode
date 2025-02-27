@@ -82,8 +82,8 @@ köp, där varje använd poäng omvandlas till 1 kr.
 -   [x] Skapa routes för kundvagn
 -   [x] Skapa klass för gäst kund
 -   [x] Skapa logik för nuvarande kund (current_customer)
--   [ ] Skapa en resurs för poäng
--   [ ] Skapa routes för poäng
+-   [x] Skapa en resurs för poäng
+-   [x] Skapa routes för poäng
 -   [ ] Skapa en resurs för försäljningar
 -   [ ] Skapa routes för försäljningar
 -   [ ] Skapa en resurs för fakturor
